@@ -25,7 +25,7 @@
             margin-bottom: 20px;
         }
 
-        nav button {
+        nav a { /* Changed to use <a> tags */
             background-color: black;
             color: gold;
             border: 2px solid gold;
@@ -34,9 +34,10 @@
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
+            text-decoration: none; /* Remove underline from links */
         }
 
-        nav button:hover {
+        nav a:hover {
             background-color: gold;
             color: black;
         }
@@ -48,22 +49,13 @@
             <h1>My Portfolio</h1>
         </header>
         <nav>
-            <button id="about">About Me</button>
-            <button id="motivation">Motivation</button>
-            <button id="skills">Skills</button>
-            <button id="education">Education</button>
-            <button id="experience">Experience</button>
-            <button id="catalog">Catalog</button>
+            <a href="about.html">About Me</a>
+            <a href="motivation.html">Motivation</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="catalog.html">Catalog</a>
         </nav>
     </div>
-    <script>
-        document.getElementById('about').addEventListener('click', function() {
-            window.location.href = 'about.html';
-        });
-
-        document.getElementById('motivation').addEventListener('click', function() {
-            window.location.href = 'motivation.html';
-        });
-
-        document.getElementById('skills').addEventListener('click', function() {
-            window.location.href = '
+</body>
+</html>
