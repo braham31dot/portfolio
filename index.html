@@ -25,7 +25,7 @@
             margin-bottom: 20px;
         }
 
-        nav a { /* Changed to use <a> tags */
+        nav a {
             background-color: black;
             color: gold;
             border: 2px solid gold;
@@ -34,12 +34,23 @@
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
-            text-decoration: none; /* Remove underline from links */
+            text-decoration: none;
+            display: inline-block; /* Display as inline block */
         }
 
         nav a:hover {
             background-color: gold;
             color: black;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            nav a {
+                display: block; /* Stack links vertically */
+                width: 100%; /* Make links full width */
+                margin: 5px 0; /* Adjust margins */
+                text-align: center; /* Center text */
+            }
         }
     </style>
 </head>
