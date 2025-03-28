@@ -35,7 +35,9 @@
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
             text-decoration: none;
-            display: inline-block; /* Display as inline block */
+            display: block; /* Display as block by default */
+            width: 100%; /* Make links full width by default */
+            text-align: center; /* Center the text by default */
         }
 
         nav a:hover {
@@ -43,13 +45,11 @@
             color: black;
         }
 
-        /* Media query for smaller screens */
-        @media (max-width: 600px) {
+        /* Media query for larger screens */
+        @media (min-width: 601px) {
             nav a {
-                display: block; /* Stack links vertically */
-                width: 100%; /* Make links full width */
-                margin: 5px 0; /* Adjust margins */
-                text-align: center; /* Center text */
+                display: inline-block; /* Display inline on larger screens */
+                width: auto; /* Allow links to size to content */
             }
         }
     </style>
@@ -69,4 +69,5 @@
         </nav>
     </div>
 </body>
+</html>
 </html>
